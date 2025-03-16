@@ -21,7 +21,7 @@ release/* – used for preparing production releases, allowing testing before me
 hotfix/* – for urgent fixes in production, merged into both main and develop
 
 ## 🛠️ Technology Stack
-* Backend: GoLang, Python
+* Backend: Python
 * Frontend: Angular
 * Authentication & Authorization: Firebase Auth
 * Database: (To be decided)
