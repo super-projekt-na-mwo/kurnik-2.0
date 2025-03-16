@@ -1,4 +1,4 @@
-# ✨ Kurnik-2.0
+# ✨ Kurnik 2.0
 Preliminary design of an application that looks like “kurnik.pl” website. Created for the design class of the course "Model-driven software development".
 
 ## 💡Description
@@ -11,9 +11,13 @@ Kurnik 2.0 is a web application akin to a social media platform. Its primary goa
 
 ## 🌿 Git Branching Strategy
 main – stable production version
+
 develop – main branch for development
+
 feature/* – branches for new features, merged into develop when complete
+
 release/* – used for preparing production releases, allowing testing before merging into main
+
 hotfix/* – for urgent fixes in production, merged into both main and develop
 
 ## 🛠️ Technology Stack
