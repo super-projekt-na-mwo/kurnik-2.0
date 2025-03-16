@@ -1,0 +1,7 @@
+credentials.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform/
+.terraform/
+backend-config.hcl
