@@ -30,7 +30,6 @@ hotfix/* – for urgent fixes in production, merged into both main and develop
 
 ## 📂 Project structure
 ```
-/develop - 
 /frontend   - frontend application code  
 /backend    - backend application code  
 /database   - database-related code  
