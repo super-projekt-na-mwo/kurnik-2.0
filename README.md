@@ -1,5 +1,5 @@
 # ✨ Kurnik 2.0
-Preliminary design of an application that looks like “kurnik.pl” website. Created for the design class of the course "Model-driven software development".
+Preliminary design of an application that looks like “kurnik.pl” website. Created for the project class of the course "Model-driven software development".
 
 ## 💡Description
 Kurnik 2.0 is a web application akin to a social media platform. Its primary goal is to create a secure and welcoming environment where users can engage with others through gameplay, information exchange, and interactive reactions. The platform fosters a sense of community by enabling seamless interaction, ensuring both entertainment and meaningful social connections in a safe digital space.
