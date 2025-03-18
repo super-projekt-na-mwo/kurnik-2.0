@@ -5,11 +5,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-
-    backend "gcs" {
-      bucket = "kurnik-states-bucket"
-      prefix = "terraform/state"
-  }
 }
 
 provider "google-beta" {
@@ -20,3 +15,11 @@ provider "google-beta" {
   alias = "no_user_project_override"
   user_project_override = false
 }
+
+resource "google_firebase_project" "kurnik" {
+  provider = google-beta.no_user_project_override
+  project  = var.project_id
+
+  depends_on = [var.project_services]
+}
+

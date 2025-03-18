@@ -1,9 +1,26 @@
+terraform {
+  required_providers {
+    google-beta = {
+      source  = "hashicorp/google-beta"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "google-beta" {
+  user_project_override = true
+}
+
+provider "google-beta" {
+  alias = "no_user_project_override"
+  user_project_override = false
+}
+
 resource "google_project" "kurnik" {
   provider   = google-beta.no_user_project_override
 
   name       = var.project_information.name
   project_id = var.project_information.id
-  # billing_account = var.billing_account
 
   labels = {
     "firebase" = "enabled"
@@ -11,7 +28,7 @@ resource "google_project" "kurnik" {
 
   lifecycle {
     prevent_destroy = true
-    ignore_changes = [billing_account]
+    ignore_changes = [ billing_account ]
   }
 }
 
@@ -26,15 +43,5 @@ resource "google_project_service" "kurnik" {
   ])
   service = each.key
 
-  # Don't disable the service if the resource block is removed by accident.
   disable_on_destroy = false
-}
-
-resource "google_firebase_project" "kurnik" {
-  provider = google-beta
-  project  = google_project.kurnik.project_id
-
-  depends_on = [
-    google_project_service.kurnik
-  ]
 }

@@ -6,7 +6,7 @@ variable "project_information" {
 
   default = {
     name = "Better version of Kurnik"
-    id   = "kurnik-mwo-project"
+    id   = "mwo-project-kurnik"
   }
 
   validation {
@@ -34,7 +34,7 @@ variable "bucket_name" {
     error_message = "Bucket name must be 3-63 characters long, contain only lowercase letters, numbers, and dashes, and must start and end with a letter or number."
   }
 
-  default = "kurnik-states-bucket"
+  default = "kurnik-bucket-for-states"
 }
 
 variable "bucket_region"{
