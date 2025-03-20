@@ -2,11 +2,15 @@ variable "bucket_name" {
   type = string
 }
 
-variable "bucket_region" {
+variable "region" {
   type = string
   default = "EU"
 }
 
 variable "project_id" {
   type = string
+}
+
+variable "google_project" {
+  type = any
 }

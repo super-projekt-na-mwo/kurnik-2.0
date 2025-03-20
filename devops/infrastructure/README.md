@@ -23,8 +23,6 @@ gs://<bucket_name>
 Folder structure
 ```
 devops/infrastructure/
-├── .github/
-│   └── workflows/            # Pliki konfiguracyjne CI/CD (np. GitHub Actions)
 ├── .terraform/               # Folder tworzony automatycznie przez Terraform (nie commitujemy go)
 ├── envs/
 │   └── dev/                  # Konfiguracja Terraform dla środowiska deweloperskiego
@@ -44,7 +42,6 @@ devops/infrastructure/
 │       ├── main.tf
 │       ├── outputs.tf
 │       └── variables.tf
-├── .gitignore                
 ├── main.tf                   # Główna konfiguracja Terraform i backendu
 ├── providers.tf              # Definicje providerów (google-beta)
 ├── variables.tf              # Zbiór zmiennych globalnych

@@ -5,3 +5,7 @@ variable "project_id" {
 variable "project_services" {
   type = any
 }
+
+variable "google_project" {
+  type = any
+}

@@ -1,25 +1,7 @@
-terraform {
-  required_providers {
-    google-beta = {
-      source  = "hashicorp/google-beta"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "google-beta" {
-  user_project_override = true
-}
-
-provider "google-beta" {
-  alias = "no_user_project_override"
-  user_project_override = false
-}
-
 resource "google_storage_bucket" "state-files" {
   provider                    = google-beta
   name                        = var.bucket_name
-  location                    = var.bucket_region
+  location                    = var.region
   project                     = var.project_id
   uniform_bucket_level_access = true
 
@@ -39,4 +21,6 @@ resource "google_storage_bucket" "state-files" {
   lifecycle {
     prevent_destroy = true
   }
+
+  depends_on = [ var.google_project ]
 }

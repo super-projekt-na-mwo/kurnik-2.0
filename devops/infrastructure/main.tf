@@ -12,12 +12,15 @@ module "project" {
 
 module "firebase" {
   source    = "./modules/firebase"
-  project_id = var.project_information.id
+  project_id = module.project.project_id
   project_services = module.project.project_services
+  google_project = module.project.google_project
 }
 
 module "storage" {
   source    = "./modules/storage"
-  project_id = var.project_information.id
+  google_project = module.project.google_project
+  project_id = module.project.project_id
   bucket_name = var.bucket_name
+  region = var.region
 }

@@ -4,4 +4,5 @@ project_information = {
 }
 
 bucket_name = "kurnik-bucket-for-states"
-bucket_region = "EU"
+
+region = "EU"
